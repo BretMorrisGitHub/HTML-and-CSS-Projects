@@ -1,0 +1,171 @@
+body{
+    margin: 0%;
+}
+
+.background{
+    background-color: rgb(65, 61, 68);
+}
+
+h1{
+    color: rgb(202, 202, 202);
+}
+
+h2{
+    color: rgb(202, 202, 202);
+}
+
+p{
+    color: rgb(202, 202, 202);
+}
+
+.center{
+    text-align: center;
+}
+
+.NavBar{
+    text-align: center;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(100, 102, 102);
+    position: fixed;
+    overflow: hidden;
+    height: 40px;
+    z-index: 1;
+}
+
+.NavBar a{
+    text-align: center;
+    position: relative;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Avantgarde, sans-serif;
+    color:rgb(228, 228, 228);
+    padding: 14px 16px;
+    top: 6px
+    
+    
+}
+
+.NavBar a:hover{
+    background-color: rgb(202, 202, 202);
+    font-weight: bold;
+    color: black;
+}
+
+/*---------------------------------------
+    Side bar still needs work
+---------------------------------------*/
+.SideBar{
+    position: fixed;
+    text-align: center;
+    width: 2.5%;
+    height: 100%;
+    background: rgb(100, 102, 102);
+    top: 0;
+    z-index: 1;
+}
+
+.SideBar a{
+    position: relative;
+    margin: 13px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(228, 228, 228);
+    height: 50%;
+    top: 50%;
+}
+
+.SideBar a:hover{
+    background-color: rgb(202, 202, 202);
+    font-weight: bold;
+    color: black;
+}
+
+.Heading{
+    background-color: rgb(83, 83, 83);
+    text-align: center;
+    margin-top: 28px;
+    padding-bottom: 20px;
+}
+
+.Heading h1{
+    padding-top: 20px;
+}
+
+.Heading p{
+    color: rgb(228, 228, 228);
+    font-size: 18px;
+    position: relative;
+}
+
+.Heading:hover{
+    transition: transform 2s;
+    transform: scale(1.1)
+}
+
+.Column_1{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(53, 52, 52);
+    float: left;
+}
+
+.Column_1 img{
+    padding-left: 35%;
+}
+
+.Row{
+    display: block;
+}
+
+.Column_2{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(53, 52, 52);
+    float: left;
+}
+
+.Column_2 h1{
+    padding-left: 5px;
+}
+
+form{
+    border-radius: 5px;
+    background-color: rgb(100, 100, 100);
+    padding: 15px;
+    margin-left: 1px;
+    color: rgb(202, 202, 202);
+}
+
+input[type=text]{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgb(53, 52, 52);
+}
+
+input[type=submit]{
+    margin-top: 5px;
+}
+
+input[type=text]:hover{
+    background-color: rgb(202, 202, 202);
+    color: rgb(53, 52, 52);
+
+}
+
+input[type=submit]:hover{
+    background-color: rgb(53, 52, 52);
+    color: rgb(202, 202, 202);
+}
+
+.SideBar-Adjust h1 {
+    margin-left: 50px;
+}
+.SideBar-Adjust p {
+    margin-left: 50px;
+}
