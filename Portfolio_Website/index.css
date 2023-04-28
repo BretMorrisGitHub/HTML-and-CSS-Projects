@@ -1,7 +1,18 @@
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     font-family: Avantgarde, sans-serif;
-    
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out{
+    opacity: 0;
+    transition: none;
 }
 
 .background-image1{
@@ -13,26 +24,37 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     
-    
 }
 
 .Welcome-Heading-Container{
     width: 100%;
     text-align: center;
-    left: 0;
+    left: auto;
     position: absolute;
     top: 30%;
+    animation: zoomInAndOut 15s infinite;
+}
 
+@keyframes zoomInAndOut{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
 }
 
 .Welcome-Heading-Container span.Heading-Text{
     background-color: rgb(70, 69, 69);
     color: antiquewhite;
     padding: 15px;
-    font-size: 25px;
+    font-size: 2vw;
     border: 2px solid rgb(70, 69, 69);
     border-radius: 20px;
-
+    animation: zoomInAndOut 15s forwards;
 }
 
 .row-1{
@@ -51,14 +73,14 @@ body{
     position: absolute;
     text-align: center;
     color: antiquewhite;
-    z-index: 10;
+    z-index: 9;
 }
 
 .row-2 a{
     text-decoration: non;
     color: antiquewhite;
     cursor: pointer;
-    z-index: 10;
+    z-index: 9;
 }
 
 .background-image2{
@@ -117,6 +139,7 @@ body{
     text-align: center;
     font-size: 20px;
     padding-top: 55px;
+
 }
 
 .contact-container{
@@ -124,6 +147,8 @@ body{
     padding-top: 250px;
     color:antiquewhite;
     width: 100%;
+    z-index: 9;
+    
 }
 
 form{
@@ -136,6 +161,16 @@ form{
     width: 25%;
     margin-right: auto;
     margin-left: auto;
+}
+
+#form-container{
+    display: none;
+    z-index: 10;
+}
+
+.open-button{
+    margin-left: 44%;
+    font-size: 25px;
 }
 
 input[type=text]{
@@ -204,4 +239,15 @@ form h2{
     position: absolute;
 }
 
+#Animate{
+    animation: myMove 5s infinite;
+    
+}
 
+@keyframes myMove{
+    0%  {left: 200px;}
+    25% {right:200px;}
+    25% {right: 200px;}
+    
+    
+}

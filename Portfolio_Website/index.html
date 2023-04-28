@@ -4,8 +4,17 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width" />
         <title>Bret Morris | Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./index.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
+        
+        <script>
+            document.body.classList.add('fade-out');
+            window.addEventListener('DOMContentLoaded', () =>{
+                document.body.classList.remove('fade-out');
+            });
+        </script>
+        
         <div class="NavBar">
             <a rel="Home">Home</a>
             <a href="#AboutMe">About Me</a>
@@ -42,7 +51,7 @@
         <div class="background-image2">
                 <div class="img-1">
                     <div class="img-container">
-                        <img src="./Images/GitHub.jpeg" width="200px" height="150px" class="center">
+                        <img src="./Images/GitHub.jpeg" id="Animate" width="200px" height="150px" class="center">
                     </div>
                 </div>
         </div>
@@ -60,7 +69,7 @@
         <div class="background-image3">
             <div class="img-2">
                 <div class="img-container-2">
-                    <img src="./Images/LinkedinPic.png" width="200px" height="150px" class="center">
+                    <img src="./Images/LinkedinPic.png" id="Animate" width="200px" height="150px" class="center">
                 </div>
             </div>
         </div>
@@ -77,19 +86,27 @@
         
         <div class="contact-container" id="Contact">
             
-            <span class="form-container"><form action="https://formspree.io/f/mgebpgqk" method="POST">
+            <button class="open-button" onclick="openForm()">Open Contact Form</button>
+            <div id="form-container">
+            <span><form id="myForm" onsubmit="return validateForm()" action="https://formspree.io/f/mgebpgqk" method="POST">
                 <h2>Contact Me:</h2>
                 <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
+                    <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
                 <br>
                 <label>Email:</label>
                     <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
                 <br>
+                <label>Phone Number:</label>
+                    <input type="text" id="Phone-Number" name="Phone-Number" placeholder="Please enter your phone number here">
+                <br>
                 <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                    <input type="text" id="Message" name="Message" placeholder="Please enter your message here">
                 <br>   
-                    <input type="submit" value="SUBMIT">
+                <button type="button" class="btn-cancel" onclick="closeForm()">Close Form</button>
+                
+                <input type="submit" value="SUBMIT">
             </form></span>
+            </div>
         </div>
         
         <div class="background-image1">
